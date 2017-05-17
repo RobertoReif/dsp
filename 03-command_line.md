@@ -41,7 +41,14 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+ANSWERS:
+`ls` - short listing
+`ls -a` - listing including hidden files  
+`ls -l` - long listing
+`ls -lh`  - long listing with human readable file sizes
+`ls -lah` - long listing with human readable file sizes including hidden files
+`ls -t`  - sort by modification time
+`ls -Glp` - No group, long list, append / indicator to directories 
 
 ---
 
@@ -49,7 +56,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+'ls -d' displays only directories
+'ls -m' displays the names as a comma separated file
+'ls -r' displays files in reverse order
+'ls -u' displays files by the file access time
+'ls -1' displays each entry on a line
 
 ---
 
