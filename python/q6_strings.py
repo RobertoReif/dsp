@@ -1,7 +1,6 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 
-
 def donuts(count):
     """
     Given an int count of a number of donuts, return a string of the
@@ -41,8 +40,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
-
+    if len(s)>2:
+        print(s[0:2]+s[-2:len(s)])
+    else:
+        print('')
 
 def fix_start(s):
     """
@@ -60,8 +61,10 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
-
+    first = s[0]
+    s2 = s[1:len(s)]
+    s3 = first+s2.replace(first, "*")
+    print(s3)
 
 def mix_up(a, b):
     """
@@ -78,7 +81,10 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    first = a.replace(a[0:2],b[0:2])
+    second = b.replace(b[0:2],a[0:2])
+    print(first + ' '+ second)
+
 
 
 def verbing(s):
@@ -95,7 +101,16 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+#    raise NotImplementedError
+    if len(s)<3:
+        print(s)
+    elif s[-3:len(s)]=='ing':
+        x = s+'ly'
+        print(x)
+    else:
+        x = s+'ing'
+        print(x)
+
 
 
 def not_bad(s):
@@ -115,8 +130,15 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    #raise NotImplementedError
+    not_loc = s.find(' not ')
+    bad_loc = s.find(' bad')
+    if not_loc>-1 and bad_loc>-1 and bad_loc>not_loc:
+        s2 = s.replace(s[not_loc+1:bad_loc+4],'good')
+    else:
+        s2 = s
 
+    print(s2)
 
 def front_back(a, b):
     """
@@ -134,5 +156,20 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+#    raise NotImplementedError
+    if len(a)%2==0:
+        a_front = a[0:len(a)/2]
+        a_back = a[len(a)/2:len(a)]
+    else:
+        a_front = a[0:len(a)/2+1]
+        a_back = a[len(a)/2+1:len(a)]
+
+    if len(b)%2==0:
+        b_front = b[0:len(b)/2]
+        b_back = b[len(b)/2:len(b)]
+    else:
+        b_front = b[0:len(b)/2+1]
+        b_back = b[len(b)/2+1:len(b)]
+
+    print(a_front+b_front+a_back+b_back)
 
