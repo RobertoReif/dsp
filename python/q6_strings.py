@@ -8,7 +8,7 @@ def donuts(count):
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
+    
     >>> donuts(4)
     'Number of donuts: 4'
     >>> donuts(9)
@@ -18,7 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+##    raise NotImplementedError
+    if count<10:
+        print ('Number of donuts: ' + str(count))
+    else:
+        print ('Number of donuts: many')
 
 
 def both_ends(s):
@@ -131,3 +135,4 @@ def front_back(a, b):
     'KitDontenut'
     """
     raise NotImplementedError
+

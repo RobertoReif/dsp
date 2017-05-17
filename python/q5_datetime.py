@@ -9,6 +9,8 @@ d2 = datetime.strptime(date_stop, "%m-%d-%Y")
 print(d1)
 print(d2)
 print (abs((d2-d1)).days)
+# 937
+
 ####b)  
 date_start = '12312013'  
 date_stop = '05282015'  
@@ -18,7 +20,7 @@ d2 = datetime.strptime(date_stop, "%m%d%Y")
 print(d1)
 print(d2)
 print (abs((d2-d1)).days)
-
+#513
 
 
 ####c)  
@@ -30,4 +32,4 @@ d2 = datetime.strptime(date_stop, "%d-%b-%Y")
 print(d1)
 print(d2)
 print (abs((d2-d1)).days)
-
+# 7850
