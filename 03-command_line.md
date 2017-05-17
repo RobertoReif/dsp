@@ -43,8 +43,8 @@ What do the following commands do:
 
 ANSWERS:  
 `ls` - short listing .  
-`ls -a` - listing including hidden files     
-`ls -l` - long listing .   
+`ls -a` - listing including hidden files       
+`ls -l` - long listing .     
 `ls -lh`  - long listing with human readable file sizes .  
 `ls -lah` - long listing with human readable file sizes including hidden files .  
 `ls -t`  - sort by modification time .  
