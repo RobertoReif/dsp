@@ -41,14 +41,14 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-ANSWERS:
-`ls` - short listing
-`ls -a` - listing including hidden files  
-`ls -l` - long listing
-`ls -lh`  - long listing with human readable file sizes
-`ls -lah` - long listing with human readable file sizes including hidden files
-`ls -t`  - sort by modification time
-`ls -Glp` - No group, long list, append / indicator to directories 
+ANSWERS: 
+`ls` - short listing . 
+`ls -a` - listing including hidden files    
+`ls -l` - long listing .  
+`ls -lh`  - long listing with human readable file sizes . 
+`ls -lah` - long listing with human readable file sizes including hidden files . 
+`ls -t`  - sort by modification time . 
+`ls -Glp` - No group, long list, append / indicator to directories   
 
 ---
 
