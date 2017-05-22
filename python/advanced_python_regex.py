@@ -41,5 +41,60 @@ def read_data(filename):
                 title_dict[i_title] += 1
         print(title_dict)
 
+        # Question 3
+        print(email)
+
+        # Question 4
+        EmailList = []
+        for iEmail in email:
+            x = (re.search('@(.*)',iEmail).group(1))
+            if x not in EmailList:
+                EmailList.append(x)
+        print(EmailList, len(EmailList))
+
+        # Question 5
+        with open('emails.csv', 'wb') as file:
+            for iEmail in email:
+                file.write(iEmail)
+                file.write('\n')
+
+        # Question 6
+        FirstName =[]
+        LastName = []
+        Q6_Dict = {}
+        for iName in range(len(name)):
+            x = (name[iName].split(' '))
+            FirstName.append(x[0])
+            LastName.append(x[-1])
+            Q6_Dict[x[-1]] = [all_degrees[iName],titles_list[iName],email[iName]]
+            print(Q6_Dict)
+
+        key = sorted(Q6_Dict.iterkeys())
+        for i_Sort in range(3):
+            print (key[i_Sort],Q6_Dict[key[i_Sort]])
+
+
+        # Question 7
+        FirstName =[]
+        LastName = []
+        Q7_Dict = {}
+        for iName in range(len(name)):
+            x = (name[iName].split(' '))
+            FirstName.append(x[0])
+            LastName.append(x[-1])
+            Q7_Dict[(x[0],x[-1])] = [all_degrees[iName],titles_list[iName],email[iName]]
+            print(Q7_Dict)
+
+        key = sorted(Q7_Dict.iterkeys())
+        for i_Sort in range(3):
+            print (key[i_Sort],Q7_Dict[key[i_Sort]])
+
+        # Question 8
+        def getKey(item):
+            return item[1]
+
+        key = sorted(Q7_Dict.iterkeys(), key = getKey)
+        for i_Sort in range(3):
+            print (key[i_Sort],Q7_Dict[key[i_Sort]])
 
 read_data('faculty.csv')
